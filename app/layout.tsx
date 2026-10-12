@@ -12,6 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://gluon.stability.nexus"),
   alternates: {
@@ -55,7 +57,7 @@ export const metadata: Metadata = {
     siteName: "Gluon Protocol",
     images: [
       {
-        url: "/image.png",
+        url: `${basePath}/image.png`,
         width: 512,
         height: 512,
         alt: "Gluon Logo",
@@ -71,13 +73,13 @@ export const metadata: Metadata = {
       "Gluon is a fully autonomous and fully backed stablecoin protocol. Split any token into stable and volatile sub-tokens (minting stablecoins), merge these sub-tokens back into the original token (redeeming stablecoins), and transmute one sub-token into the other to adjust how much stability or leveraged volatility you wish to have.",
     site: "@StabilityNexus",
     creator: "@StabilityNexus",
-    images: ["/image.png"],
+    images: [`${basePath}/image.png`],
   },
   robots: "index, follow",
   icons: {
     icon: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/image.png`,
+        url: `${basePath}/image.png`,
         type: "image/png",
         sizes: "32x32",
       },
