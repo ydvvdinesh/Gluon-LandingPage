@@ -10,9 +10,9 @@ Official academic specification and mathematical design principles of the Gluon 
 Rather than utilizing traditional collateralized debt positions (CDPs) or rigid seigniorage mechanics, Gluon splits a single base asset (e.g. ERG, ETH) into stable and volatile sub-assets:
 
 *   **Base Token (denoted by ☯ or Base Asset)**: The volatile reserve asset held by the smart contract reactor.
+*   **Tokeons / Nucleons**: The sub-assets (neutrons and protons) collectively.
 *   **Stable Tokeons or Neutrons (denoted by $\circ$)**: Sub-tokens whose value is maintained stable relative to a target price (e.g., 1 GAU pegged to 1 gram of gold or 1 USD).
 *   **Volatile Tokeons or Protons (denoted by $\bullet$)**: Sub-tokens that absorb reserve fluctuations, providing leveraged exposure to the underlying reserve asset.
-*   **Tokeons / Nucleons**: The sub-assets (neutrons and protons) collectively.
 
 ---
 
