@@ -77,8 +77,8 @@ export default function Navbar() {
           maxWidth: '100%',
           borderRadius: '0px',
           border: '1px solid rgba(252, 204, 24, 0.08)',
-          paddingLeft: windowWidth > 0 ? getPadding() : '16px',
-          paddingRight: windowWidth > 0 ? getPadding() : '16px',
+          paddingLeft: '16px',
+          paddingRight: '16px',
         }}
         animate={hasAnimated ? {
           backgroundColor: isScrolled ? 'rgba(15, 15, 30, 0.55)' : 'rgba(15, 15, 30, 0.25)',
