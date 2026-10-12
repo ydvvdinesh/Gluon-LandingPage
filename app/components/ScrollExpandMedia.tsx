@@ -96,7 +96,8 @@ const ScrollExpandMedia = ({
     [initialHeight, initialHeight, targetHeight, targetHeight]
   );
 
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.5, 0.7, 1], [1, 1, 1, 1]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.25, 0.55, 1], [0, 0, 1, 1]);
+  const pointerEvents = useTransform(scrollYProgress, (v) => (v > 0.25 ? 'auto' : 'none'));
   const firstWord = title ? title.split(' ')[0] : '';
   const restOfTitle = title ? title.split(' ').slice(1).join(' ') : '';
 
@@ -192,8 +193,8 @@ const ScrollExpandMedia = ({
 
           {/* Content Section */}
           <motion.div
-            className='absolute inset-0 flex items-center justify-center p-4 md:p-8 pointer-events-auto z-20'
-            style={{ opacity: contentOpacity }}
+            className='absolute inset-0 flex items-center justify-center p-4 md:p-8 z-20'
+            style={{ opacity: contentOpacity, pointerEvents }}
           >
             <motion.div 
               className='max-w-4xl w-full rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 backdrop-blur-2xl bg-[rgba(15,15,30,0.4)] border border-[rgba(252,204,24,0.3)]'
